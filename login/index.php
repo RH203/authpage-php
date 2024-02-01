@@ -15,16 +15,15 @@
     </div>
 
     <div class="input-container">
+      <label for="username">Username</label>
       <div class="input">
-        <label for="username">Username</label>
         <input type="text" id="username" placeholder="John Wick" required>
       </div>
 
+      <label for="password">Password</label>
       <div class="input">
-        <label for="password">Password</label>
         <input type="password" id="password" required>
-        <button type="button" id="button" class="eye-icon" onclick="togglePasswordVisibility()">
-        </button>
+        <button type="button" id="button" class="eye-icon" onclick="togglePasswordVisibility()"></button>
       </div>
     </div>
   </div>
