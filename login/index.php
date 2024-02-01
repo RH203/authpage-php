@@ -9,9 +9,29 @@
 </head>
 
 <body>
-  <div>
-    <span>Login </span>
+  <div class="container">
+    <div class="title-container">
+      <span id="title">Explore Weather Wise: Log in to forecast your day!</span>
+    </div>
+
+    <div class="input-container">
+      <div class="input">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="John Wick" required>
+      </div>
+
+      <div class="input">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+        <button type="button" id="button" class="eye-icon" onclick="togglePasswordVisibility()">
+        </button>
+      </div>
+    </div>
   </div>
+
+
+
+  <script src="index.js"></script>
 </body>
 
 </html>
