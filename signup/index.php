@@ -1,6 +1,9 @@
+<?php include '../config/db.php' ?>
+
+<?php
 
 
-
+?>
 
 
 <!DOCTYPE html>
