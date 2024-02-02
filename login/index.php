@@ -14,7 +14,7 @@
       <span id="title">Explore Weather Wise: Log in to forecast your day!</span>
     </div>
 
-    <div class="input-container">
+    <form class="input-container">
       <label for="username">Username</label>
       <div class="input">
         <input type="text" id="username" placeholder="John Wick" required>
@@ -25,7 +25,16 @@
         <input type="password" id="password" required>
         <button type="button" id="button" class="eye-icon" onclick="togglePasswordVisibility()"></button>
       </div>
+
+      <div class="button">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+
+    <div class="signup">
+      <span class="signup-text">Never had an account? <a href="../signup/" class="link">Sign up</a> now</span>
     </div>
+
   </div>
 
 
