@@ -1,3 +1,27 @@
+<?php include '../config/db.php' ?>
+
+<?php
+session_start();
+
+if (isset($_POST['login'])) {
+  $username = mysqli_real_escape_string($conn, $_POST['username']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+  $query = mysqli_query($conn, "select name from user where name = '$username' and password = '$password';");
+  header('Location: index.php');
+
+  if (mysqli_num_rows($result) > 0) {
+    header('Location: /../../user/welcome.php');
+    exit();
+  } else {
+    echo "Incorrect username or password.";
+  }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,20 +38,21 @@
       <span id="title">Explore Weather Wise: Log in to forecast your day!</span>
     </div>
 
-    <form class="input-container">
+    <form class="input-container" method="post">
       <label for="username">Username</label>
       <div class="input">
-        <input type="text" id="username" placeholder="John Wick" required>
+        <input name="username" type="text" id="username" name="username" placeholder="John Wick" required>
       </div>
 
       <label for="password">Password</label>
       <div class="input">
         <input type="password" id="password" required>
-        <button type="button" id="button" class="eye-icon" onclick="togglePasswordVisibility()"></button>
+        <button name="password" type="button" id="button" class="eye-icon"
+          onclick="togglePasswordVisibility()"></button>
       </div>
 
       <div class="button">
-        <button type="submit">Login</button>
+        <button type="submit" name="login">Login</button>
       </div>
     </form>
 
